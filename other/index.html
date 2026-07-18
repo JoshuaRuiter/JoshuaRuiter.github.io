@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Joshua Ruiter - Personal Website</title>
+    <title>Joshua Ruiter - Other Projects</title>
     <style>
-        /* Minimal layout styling */
         body {
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
@@ -26,12 +25,28 @@
         main {
             margin-top: 40px;
         }
+        /* Style for the project sub-navigation list */
+        .project-list {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        .project-list li {
+            margin-bottom: 15px;
+        }
+        .project-link {
+            font-weight: bold;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Joshua Ruiter</h1>
         <!-- Relative links pointing to the subfolder index files -->
         <nav>
             <a href="/">Home</a>
@@ -42,15 +57,32 @@
     </header>
 
     <main>
-        <h2>Welcome</h2>
-        <p>This is the main landing page of your personal professional website. You can introduce yourself, your current role, and your overarching objectives here.</p>
+        <h2>Other</h2>
+        <p>A collection of personal projects.</p>
         
-        <p>Use the navigation links above to explore my academic research, teaching background, and supplemental projects.</p>
+        <ul class="project-list">
+            <li>
+                <a class="project-link" href="/other-projects/machine-learning/">Machine Learning</a>
+                — Data analysis models, dataframes, and computational experiments.
+            </li>
+            <li>
+                <a class="project-link" href="/other-projects/music/">Music</a>
+                — Audio compositions, transcription, or arrangements.
+            </li>
+            <li>
+                <a class="project-link" href="/other-projects/spirit-island/">Spirit Island</a>
+                — Strategy analysis, game logs, or custom trackers.
+            </li>
+            <li>
+                <a class="project-link" href="/other-projects/cube/">Rubik's Cube</a>
+                — Group theory permutations, commutators, and algebraic properties.
+            </li>
+        </ul>
     </main>
 
     <footer>
         <hr>
-        <p>&copy; 2026 Your Name</p>
+        <p>&copy; 2026 Joshua Ruiter</p>
     </footer>
 
 </body>

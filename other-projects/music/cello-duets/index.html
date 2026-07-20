@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="music, arrangements, choral, satb, choir">
-    <meta name="description" content="Personal web page of Joshua Ruiter - Choral Arrangements.">
-    <title>Choral Arrangements | Joshua Ruiter</title>
+    <meta name="keywords" content="music, arrangements, cello, cello duets, cello duet">
+    <meta name="description" content="Personal web page of Joshua Ruiter - Cello Duet Arrangements.">
+    <title>Cello Duets | Joshua Ruiter</title>
     <style>
         /* Modern Reset & Base Styles */
         * {
@@ -89,31 +89,17 @@
             list-style: none;
             margin-top: 15px;
         }
-        .pdf-list > li {
-            margin-bottom: 15px;
-            padding: 12px 15px;
+        .pdf-list li {
+            margin-bottom: 10px;
+            padding: 10px;
             background: #fcfcfc;
             border: 1px solid #eee;
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
         }
-        
-        /* Multi-file alignment layout */
-        .item-info {
-            flex: 1;
-            min-width: 250px;
-        }
-        .file-links {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        nav a, .file-links a {
+        .pdf-list a {
             color: #0066cc;
             text-decoration: none;
             font-weight: 500;
@@ -122,7 +108,7 @@
             background-color: #f0f4f8;
             transition: background-color 0.2s, color 0.2s;
         }
-        nav a:hover, .file-links a:hover {
+        .pdf-list a:hover {
             background-color: #0066cc;
             color: #fff;
             text-decoration: none;
@@ -142,7 +128,7 @@
 <body>
 
 <header>
-    <h1>Choral</h1>
+    <h1>Cello Duets</h1>
     
     <!-- Top-level Site Navigation -->
     <nav class="main-nav">
@@ -154,75 +140,31 @@
     
     <!-- Music Portfolio Specific Categories -->
     <nav class="music-nav">
+        <!-- Note the back track "../" to go up one level to the main music folder before entering subfolders -->
         <a href="../cello-solos/">Cello Solos</a>
-        <a href="../cello-duets/">Cello Duets</a>
+        <a href="../cello-duets/" class="active">Cello Duets</a>
         <a href="../cello-quartets/">Cello Quartets</a>
         <a href="../cello-sextets/">Cello Sextets</a>
         <a href="../cello-octets/">Cello Octets</a>
         <a href="../page-turn-copies/">2Cellos Page Turn Copies</a>
         <a href="../violin-ensembles/">Violin Ensembles</a>
-        <a href="../choral/" class="active">Choral</a>
+        <a href="../choral/">Choral</a>
         <a href="../">← Back to Music Main</a>
     </nav>
 </header>
 
 <main>
-    <p>Arrangements and transcriptions for choral ensembles.</p>
+    <p>Arrangements for cello duets.</p>
     
     <div class="portfolio-section">
         <ul class="pdf-list">
+            <!-- Items can be added here following the standard list format below -->
+            <!-- 
             <li>
-                <div class="item-info">
-                    <span>Amazing Grace</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/amazing-grace.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Hey Jude (The Beatles)</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/hey-jude.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>I Sing the Mighty Power of God</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/i-sing-the-mighty-power-of-god.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>It's Alright</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/its-alright.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Strawberry Fields Forever (The Beatles)</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/strawberry-fields-score.pdf" target="_blank">Full Score</a>
-                    <a href="../pdfs/strawberry-fields-piano-reduction.pdf" target="_blank">Piano Reduction</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Young and Beautiful (Lana Del Rey)</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/young-and-beautiful-satb-b.pdf" target="_blank">SATB (B Major)</a>
-                    <a href="../pdfs/young-and-beautiful-satb-csharp.pdf" target="_blank">SATB (C# Major)</a>
-                    <a href="../pdfs/young-and-beautiful-ssaa-b.pdf" target="_blank">SSAA (B Major)</a>
-                    <a href="../pdfs/young-and-beautiful-ssaa-csharp.pdf" target="_blank">SSAA (C# Major)</a>
-                </div>
-            </li>
+                <span>Piece Title (Composer)</span>
+                <a href="../pdfs/filename.pdf" target="_blank">View PDF</a>
+            </li> 
+            -->
         </ul>
     </div>
 </main>

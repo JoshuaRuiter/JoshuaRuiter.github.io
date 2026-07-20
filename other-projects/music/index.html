@@ -45,25 +45,26 @@
             margin-bottom: 15px;
             padding-bottom: 15px;
         }
-        /* Top main navigation separator */
         nav.main-nav {
             border-bottom: 1px solid #eaeaea;
         }
-        nav a {
+        nav a, nav button {
             text-decoration: none;
             color: #0066cc;
             font-weight: 500;
             padding: 6px 12px;
             border-radius: 4px;
             background-color: #f0f4f8;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
             transition: background-color 0.2s, color 0.2s;
         }
-        nav a:hover {
+        nav a:hover, nav button:hover {
             background-color: #0066cc;
             color: #fff;
         }
-        /* Active page styling */
-        nav a.active {
+        nav button.active {
             background-color: #333;
             color: #fff;
         }
@@ -77,35 +78,75 @@
             min-height: 300px;
         }
         main p {
-            font-size: 1.1rem;
             margin-bottom: 25px;
         }
 
-        /* Example Placeholder for PDF List */
+        /* Portfolio Sections */
         .portfolio-section {
+            display: none;
             margin-top: 20px;
+            animation: fadeIn 0.3s ease-in-out;
         }
-        .pdf-list {
-            list-style: none;
-            margin-top: 15px;
+        .portfolio-section.active-section {
+            display: block;
         }
-        .pdf-list li {
+        .portfolio-section h2 {
+            color: #444;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        /* Piece Groups */
+        .piece-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fdfdfd;
+            border: 1px solid #eef2f5;
+            border-radius: 6px;
+        }
+        .piece-title {
+            font-weight: 600;
             margin-bottom: 10px;
-            padding: 10px;
-            background: #fcfcfc;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: #2c3e50;
         }
-        .pdf-list a {
+
+        /* PDF Download Links Layout */
+        .pdf-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .pdf-links a {
+            display: inline-flex;
+            align-items: center;
             color: #0066cc;
             text-decoration: none;
             font-weight: 500;
+            padding: 4px 10px;
+            background: #fff;
+            border: 1px solid #d0e2f3;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
-        .pdf-list a:hover {
-            text-decoration: underline;
+        .pdf-links a:hover {
+            background: #e6f2ff;
+            border-color: #0066cc;
+            text-decoration: none;
+        }
+        .pdf-links a.score-link {
+            background: #fff9e6;
+            border-color: #ffe0b2;
+            color: #b78103;
+        }
+        .pdf-links a.score-link:hover {
+            background: #fff3cd;
+            border-color: #b78103;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Footer */
@@ -124,7 +165,7 @@
 <header>
     <h1>Music</h1>
     
-    <!-- Top-level Site Navigation aligned with updated layout -->
+    <!-- Top-level Site Navigation -->
     <nav class="main-nav">
         <a href="../">Home</a>
         <a href="../math/">Math</a>
@@ -132,26 +173,592 @@
         <a href="../other-projects/">Other Projects</a>
     </nav>
     
-    <!-- Music Portfolio Specific Categories aligned with clean URLs -->
+    <!-- Music Portfolio Navigation -->
     <nav class="music-nav">
-        <a href="cello-solos/">Cello Solos</a>
-        <a href="cello-duets/">Cello Duets</a>
-        <a href="cello-quartets/">Cello Quartets</a>
-        <a href="cello-sextets/">Cello Sextets</a>
-        <a href="cello-octets/">Cello Octets</a>
-        <a href="page-turn-copies/">2Cellos Page Turn Copies</a>
-        <a href="violin-ensembles/">Violin Ensembles</a>
-        <a href="choral/">Choral</a>
+        <button class="nav-btn active" onclick="showSection('overview')">Overview</button>
+        <button class="nav-btn" onclick="showSection('cello-solos')">Cello Solos</button>
+        <button class="nav-btn" onclick="showSection('cello-duets')">Cello Duets</button>
+        <button class="nav-btn" onclick="showSection('cello-quartets')">Cello Quartets</button>
+        <button class="nav-btn" onclick="showSection('cello-sextets-octets')">Cello Sextets &amp; Octets</button>
+        <button class="nav-btn" onclick="showSection('page-turn-copies')">2Cellos Page Turns</button>
+        <button class="nav-btn" onclick="showSection('piano-ensembles')">Piano Ensembles</button>
+        <button class="nav-btn" onclick="showSection('violin-ensembles')">Violin Ensembles</button>
+        <button class="nav-btn" onclick="showSection('choral')">Choral</button>
+        <button class="nav-btn" onclick="showSection('compositions')">Compositions</button>
     </nav>
 </header>
 
 <main>
-    <p>This page contains my music arranging portfolio, organized by instrumentation. All of these arrangements were done using Musescore.</p>
+    <!-- Default Overview Section -->
+    <section id="overview" class="portfolio-section active-section">
+        <p>This page contains my music arranging portfolio, organized by instrumentation. All of these arrangements were done using MuseScore.</p>
+        <p>Select a category from the navigation menu above to browse scores and individual instrument parts.</p>
+    </section>
+
+    <!-- Cello Solos -->
+    <section id="cello-solos" class="portfolio-section">
+        <h2>Cello Solos</h2>
+        <div class="piece-group">
+            <div class="piece-title">I've Just Seen a Face</div>
+            <div class="pdf-links">
+                <a href="cello-solos/ive-just-seen-a-face.pdf" target="_blank">Solo Sheet Music</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cello Duets -->
+    <section id="cello-duets" class="portfolio-section">
+        <h2>Cello Duets</h2>
+        
+        <div class="piece-group">
+            <div class="piece-title">Aragonaise</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/aragonaise-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/aragonaise-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/aragonaise-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Book of Love</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/book-of-love-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/book-of-love-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/book-of-love-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Demons</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/demons-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/demons-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/demons-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Eye of the Tiger</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/eye-of-the-tiger-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/eye-of-the-tiger-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/eye-of-the-tiger-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Habanera</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/habanera-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/habanera-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/habanera-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Hey There Delilah</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/hey-there-delilah-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/hey-there-delilah-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/hey-there-delilah-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">I've Just Seen a Face</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/ive-just-seen-a-face-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/ive-just-seen-a-face-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/ive-just-seen-a-face-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Johnny B. Goode</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/johnny-b-goode-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/johnny-b-goode-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/johnny-b-goode-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Just What I Needed</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/just-what-i-needed-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/just-what-i-needed-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/just-what-i-needed-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Kashmir</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/kashmir-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/kashmir-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/kashmir-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Pompeii</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/pompeii-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/pompeii-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/pompeii-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Poor Wayfaring Stranger</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/poor-wayfaring-stranger-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/poor-wayfaring-stranger-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/poor-wayfaring-stranger-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Rigaudon</div>
+            <div class="pdf-links">
+                <a href="cello-duets/rigaudon.pdf" target="_blank">Duet Score</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Secrets</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/secrets-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/secrets-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/secrets-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Set Fire to the Rain</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/set-fire-to-the-rain-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/set-fire-to-the-rain-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/set-fire-to-the-rain-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Somebody That I Used to Know</div>
+            <div class="pdf-links">
+                <a href="cello-duets/somebody-that-i-used-to-know-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/somebody-that-i-used-to-know-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">The River Flows in You</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/the-river-flows-in-you-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/the-river-flows-in-you-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/the-river-flows-in-you-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">When We Were Young / When You Were Young</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-duets/when-you-were-young-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-duets/when-we-were-young-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-duets/when-we-were-young-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Yesterday</div>
+            <div class="pdf-links">
+                <a href="cello-duets/yesterday.pdf" target="_blank">Duet Score</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cello Quartets -->
+    <section id="cello-quartets" class="portfolio-section">
+        <h2>Cello Quartets</h2>
+
+        <div class="piece-group">
+            <div class="piece-title">Carry On My Wayward Son</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/carry-on-my-wayward-son-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/carry-on-my-wayward-son-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/carry-on-my-wayward-son-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/carry-on-my-wayward-son-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/carry-on-my-wayward-son-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Cheerleader</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/cheerleader-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/cheerleader-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/cheerleader-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/cheerleader-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/cheerleader-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Jar of Hearts</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/jar-of-hearts-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/jar-of-hearts-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/jar-of-hearts-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/jar-of-hearts-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/jar-of-hearts-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">More Than a Feeling</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/more-than-a-feeling-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/more-than-a-feeling-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/more-than-a-feeling-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/more-than-a-feeling-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/more-than-a-feeling-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Stairway to Heaven</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/stairway-to-heaven-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/stairway-to-heaven-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/stairway-to-heaven-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/stairway-to-heaven-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/stairway-to-heaven-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Still Fighting It</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/still-fighting-it-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/still-fighting-it-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/still-fighting-it-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/still-fighting-it-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/still-fighting-it-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">The Book of Love (Quartet)</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/the-book-of-love-quartet-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/the-book-of-love-quartet-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/the-book-of-love-quartet-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/the-book-of-love-quartet-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/the-book-of-love-quartet-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Through the Fire and the Flames</div>
+            <div class="pdf-links">
+                <a href="cello-quartets/through-the-fire-and-the-flames-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/through-the-fire-and-the-flames-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/through-the-fire-and-the-flames-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/through-the-fire-and-the-flames-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">What Makes You Beautiful</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-quartets/what-makes-you-beautiful-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-quartets/what-makes-you-beautiful-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-quartets/what-makes-you-beautiful-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-quartets/what-makes-you-beautiful-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-quartets/what-makes-you-beautiful-part-4.pdf" target="_blank">Cello 4</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cello Sextets & Octets -->
+    <section id="cello-sextets-octets" class="portfolio-section">
+        <h2>Cello Sextets &amp; Octets</h2>
+
+        <div class="piece-group">
+            <div class="piece-title">Jupiter (Octet)</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-sextets-and-octets/jupiter-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-sextets-and-octets/jupiter-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-sextets-and-octets/jupiter-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-sextets-and-octets/jupiter-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-sextets-and-octets/jupiter-part-4.pdf" target="_blank">Cello 4</a>
+                <a href="cello-sextets-and-octets/jupiter-part-5.pdf" target="_blank">Cello 5</a>
+                <a href="cello-sextets-and-octets/jupiter-part-6.pdf" target="_blank">Cello 6</a>
+                <a href="cello-sextets-and-octets/jupiter-part-7.pdf" target="_blank">Cello 7</a>
+                <a href="cello-sextets-and-octets/jupiter-part-8.pdf" target="_blank">Cello 8</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Saint-Saëns Organ Symphony (Sextet)</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-4.pdf" target="_blank">Cello 4</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-5.pdf" target="_blank">Cello 5</a>
+                <a href="cello-sextets-and-octets/saint-saens-organ-symphony-sextet-part-6.pdf" target="_blank">Cello 6</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Sweet Dreams (Sextet)</div>
+            <div class="pdf-links">
+                <a class="score-link" href="cello-sextets-and-octets/sweet-dreams-score.pdf" target="_blank">Full Score</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-2.pdf" target="_blank">Cello 2</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-3.pdf" target="_blank">Cello 3</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-4.pdf" target="_blank">Cello 4</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-5.pdf" target="_blank">Cello 5</a>
+                <a href="cello-sextets-and-octets/sweet-dreams-part-6.pdf" target="_blank">Cello 6</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2Cellos Page Turn Copies -->
+    <section id="page-turn-copies" class="portfolio-section">
+        <h2>2Cellos Page Turn Copies</h2>
+        
+        <div class="piece-group">
+            <div class="piece-title">Fragile</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/fragile-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/fragile-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Hurt</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/hurt.pdf" target="_blank">Performance Score</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Miserlou</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/miserlou-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/miserlou-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Resistance</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/resistance.pdf" target="_blank">Performance Score</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Smooth Criminal</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/smooth-criminal-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/smooth-criminal-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Thunderstruck</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/thunderstruck-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/thunderstruck-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Viva La Vida</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/viva-la-vida-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/viva-la-vida-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">We Found Love</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/we-found-love-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/we-found-love-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Welcome to the Jungle</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/welcome-to-the-jungle-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/welcome-to-the-jungle-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Where the Streets Have No Name</div>
+            <div class="pdf-links">
+                <a href="page-turn-copies/where-the-streets-have-no-name-part-1.pdf" target="_blank">Cello 1</a>
+                <a href="page-turn-copies/where-the-streets-have-no-name-part-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Piano Ensembles -->
+    <section id="piano-ensembles" class="portfolio-section">
+        <h2>Piano Ensembles</h2>
+
+        <div class="piece-group">
+            <div class="piece-title">Bless the Broken Road</div>
+            <div class="pdf-links">
+                <a class="score-link" href="piano-ensembles/bless-the-broken-road-score.pdf" target="_blank">Full Score</a>
+                <a href="piano-ensembles/bless-the-broken-road-piano.pdf" target="_blank">Piano</a>
+                <a href="piano-ensembles/bless-the-broken-road-cello.pdf" target="_blank">Cello</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Come Thou Fount</div>
+            <div class="pdf-links">
+                <a class="score-link" href="piano-ensembles/come-thou-fount-score.pdf" target="_blank">Full Score</a>
+                <a href="piano-ensembles/come-thou-fount-piano.pdf" target="_blank">Piano</a>
+                <a href="piano-ensembles/come-thou-fount-violin.pdf" target="_blank">Violin</a>
+                <a href="piano-ensembles/come-thou-fount-cello.pdf" target="_blank">Cello</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Hey Jude</div>
+            <div class="pdf-links">
+                <a class="score-link" href="piano-ensembles/hey-jude-score.pdf" target="_blank">Full Score</a>
+                <a href="piano-ensembles/hey-jude-piano.pdf" target="_blank">Piano</a>
+                <a href="piano-ensembles/hey-jude-cello-1.pdf" target="_blank">Cello 1</a>
+                <a href="piano-ensembles/hey-jude-cello-2.pdf" target="_blank">Cello 2</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">How Can I Keep from Singing</div>
+            <div class="pdf-links">
+                <a class="score-link" href="piano-ensembles/how-can-i-keep-from-singing-score.pdf" target="_blank">Full Score</a>
+                <a href="piano-ensembles/how-can-i-keep-from-singing-piano.pdf" target="_blank">Piano</a>
+                <a href="piano-ensembles/how-can-i-keep-from-singing-violin.pdf" target="_blank">Violin</a>
+                <a href="piano-ensembles/how-can-i-keep-from-singing-cello.pdf" target="_blank">Cello</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Violin Ensembles -->
+    <section id="violin-ensembles" class="portfolio-section">
+        <h2>Violin Ensembles</h2>
+
+        <div class="piece-group">
+            <div class="piece-title">Carry On My Wayward Son</div>
+            <div class="pdf-links">
+                <a class="score-link" href="violin-ensembles/carry-on-my-wayward-son-score.pdf" target="_blank">Full Score</a>
+                <a href="violin-ensembles/carry-on-my-wayward-son-part-1.pdf" target="_blank">Violin 1</a>
+                <a href="violin-ensembles/carry-on-my-wayward-son-part-2.pdf" target="_blank">Violin 2</a>
+                <a href="violin-ensembles/carry-on-my-wayward-son-part-3.pdf" target="_blank">Violin 3</a>
+                <a href="violin-ensembles/carry-on-my-wayward-son-part-4.pdf" target="_blank">Violin 4</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">O Canada</div>
+            <div class="pdf-links">
+                <a class="score-link" href="violin-ensembles/o-canada-score.pdf" target="_blank">Full Score</a>
+                <a href="violin-ensembles/o-canada-part-1.pdf" target="_blank">Violin 1</a>
+                <a href="violin-ensembles/o-canada-part-2.pdf" target="_blank">Violin 2</a>
+                <a href="violin-ensembles/o-canada-part-3.pdf" target="_blank">Violin 3</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choral -->
+    <section id="choral" class="portfolio-section">
+        <h2>Choral</h2>
+
+        <div class="piece-group">
+            <div class="piece-title">Strawberry Fields</div>
+            <div class="pdf-links">
+                <a class="score-link" href="choral/strawberry-fields-score.pdf" target="_blank">Full Score</a>
+                <a href="choral/strawberry-fields-piano-reduction.pdf" target="_blank">Piano Reduction</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Young and Beautiful (SATB)</div>
+            <div class="pdf-links">
+                <a href="choral/young-and-beautiful-satb-b.pdf" target="_blank">Key of B</a>
+                <a href="choral/young-and-beautiful-satb-csharp.pdf" target="_blank">Key of C#</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Young and Beautiful (SSAA)</div>
+            <div class="pdf-links">
+                <a href="choral/young-and-beautiful-ssaa-b.pdf" target="_blank">Key of B</a>
+                <a href="choral/young-and-beautiful-ssaa-csharp.pdf" target="_blank">Key of C#</a>
+            </div>
+        </div>
+
+        <div class="piece-group">
+            <div class="piece-title">Single Leaf Choral Scores</div>
+            <div class="pdf-links">
+                <a href="choral/amazing-grace.pdf" target="_blank">Amazing Grace</a>
+                <a href="choral/hey-jude.pdf" target="_blank">Hey Jude</a>
+                <a href="choral/i-sing-the-mighty-power-of-god.pdf" target="_blank">I Sing the Mighty Power of God</a>
+                <a href="choral/its-alright.pdf" target="_blank">It's Alright</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compositions -->
+    <section id="compositions" class="portfolio-section">
+        <h2>Compositions</h2>
+        <div class="piece-group">
+            <div class="piece-title">Psalm</div>
+            <div class="pdf-links">
+                <a class="score-link" href="compositions/psalm-score.pdf" target="_blank">Full Score</a>
+                <a href="compositions/psalm-part-1.pdf" target="_blank">Part 1</a>
+                <a href="compositions/psalm-part-2.pdf" target="_blank">Part 2</a>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
-    This page last modified on September 28, 2018.
+    This page last modified on July 20, 2026.
 </footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all portfolio sections
+        const sections = document.querySelectorAll('.portfolio-section');
+        sections.forEach(sec => sec.classList.remove('active-section'));
+
+        // Show the chosen section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.add('active-section');
+        }
+
+        // Update navigation button active styling
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Find the button that triggered the function event contextually
+        const clickedButton = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(sectionId));
+        if (clickedButton) {
+            clickedButton.classList.add('active');
+        }
+    }
+</script>
 
 </body>
 </html>

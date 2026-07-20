@@ -90,14 +90,24 @@
             margin-top: 15px;
         }
         .pdf-list li {
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
             background: #fcfcfc;
             border: 1px solid #eee;
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .piece-info {
+            font-weight: 500;
+        }
+        .links-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
         .pdf-list a {
             color: #0066cc;
@@ -140,12 +150,10 @@
     
     <!-- Music Portfolio Specific Categories -->
     <nav class="music-nav">
-        <!-- Note the back track "../" to go up one level to the main music folder before entering subfolders -->
         <a href="../cello-solos/" class="active">Cello Solos</a>
         <a href="../cello-duets/">Cello Duets</a>
         <a href="../cello-quartets/">Cello Quartets</a>
-        <a href="../cello-sextets/">Cello Sextets</a>
-        <a href="../cello-octets/">Cello Octets</a>
+        <a href="../cello-sextets-and-octets/">Cello Sextets & Octets</a>
         <a href="../page-turn-copies/">2Cellos Page Turn Copies</a>
         <a href="../violin-ensembles/">Violin Ensembles</a>
         <a href="../choral/">Choral</a>
@@ -159,9 +167,10 @@
     <div class="portfolio-section">
         <ul class="pdf-list">
             <li>
-                <span>I've Just Seen A Face (The Beatles)</span>
-                <!-- Assuming your PDFs folder is kept in the main music directory -->
-                <a href="../pdfs/ive-just-seen-a-face.pdf" target="_blank">View PDF</a>
+                <span class="piece-info">I've Just Seen A Face (The Beatles)</span>
+                <div class="links-group">
+                    <a href="../pdfs/ive-just-seen-a-face.pdf" target="_blank">View PDF</a>
+                </div>
             </li>
         </ul>
     </div>

@@ -90,14 +90,24 @@
             margin-top: 15px;
         }
         .pdf-list li {
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
             background: #fcfcfc;
             border: 1px solid #eee;
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .piece-info {
+            font-weight: 500;
+        }
+        .links-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
         .pdf-list a {
             color: #0066cc;
@@ -112,6 +122,15 @@
             background-color: #0066cc;
             color: #fff;
             text-decoration: none;
+        }
+        .pdf-list a.score-link {
+            background-color: #fff9e6;
+            color: #b78103;
+            border: 1px solid #ffe0b2;
+        }
+        .pdf-list a.score-link:hover {
+            background-color: #fff3cd;
+            color: #b78103;
         }
 
         /* Footer */
@@ -158,13 +177,153 @@
     
     <div class="portfolio-section">
         <ul class="pdf-list">
-            <!-- Items can be added here following the standard list format below -->
-            <!-- 
             <li>
-                <span>Piece Title (Composer)</span>
-                <a href="../pdfs/filename.pdf" target="_blank">View PDF</a>
-            </li> 
-            -->
+                <span class="piece-info">Aragonaise</span>
+                <div class="links-group">
+                    <a class="score-link" href="aragonaise-score.pdf" target="_blank">Full Score</a>
+                    <a href="aragonaise-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="aragonaise-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Book of Love</span>
+                <div class="links-group">
+                    <a class="score-link" href="book-of-love-score.pdf" target="_blank">Full Score</a>
+                    <a href="book-of-love-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="book-of-love-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Demons</span>
+                <div class="links-group">
+                    <a class="score-link" href="demons-score.pdf" target="_blank">Full Score</a>
+                    <a href="demons-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="demons-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Eye of the Tiger</span>
+                <div class="links-group">
+                    <a class="score-link" href="eye-of-the-tiger-score.pdf" target="_blank">Full Score</a>
+                    <a href="eye-of-the-tiger-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="eye-of-the-tiger-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Habanera</span>
+                <div class="links-group">
+                    <a class="score-link" href="habanera-score.pdf" target="_blank">Full Score</a>
+                    <a href="habanera-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="habanera-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Hey There Delilah</span>
+                <div class="links-group">
+                    <a class="score-link" href="hey-there-delilah-score.pdf" target="_blank">Full Score</a>
+                    <a href="hey-there-delilah-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="hey-there-delilah-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">I've Just Seen a Face</span>
+                <div class="links-group">
+                    <a class="score-link" href="ive-just-seen-a-face-score.pdf" target="_blank">Full Score</a>
+                    <a href="ive-just-seen-a-face-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="ive-just-seen-a-face-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Johnny B. Goode</span>
+                <div class="links-group">
+                    <a class="score-link" href="johnny-b-goode-score.pdf" target="_blank">Full Score</a>
+                    <a href="johnny-b-goode-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="johnny-b-goode-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Just What I Needed</span>
+                <div class="links-group">
+                    <a class="score-link" href="just-what-i-needed-score.pdf" target="_blank">Full Score</a>
+                    <a href="just-what-i-needed-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="just-what-i-needed-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Kashmir</span>
+                <div class="links-group">
+                    <a class="score-link" href="kashmir-score.pdf" target="_blank">Full Score</a>
+                    <a href="kashmir-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="kashmir-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Pompeii</span>
+                <div class="links-group">
+                    <a class="score-link" href="pompeii-score.pdf" target="_blank">Full Score</a>
+                    <a href="pompeii-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="pompeii-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Poor Wayfaring Stranger</span>
+                <div class="links-group">
+                    <a class="score-link" href="poor-wayfaring-stranger-score.pdf" target="_blank">Full Score</a>
+                    <a href="poor-wayfaring-stranger-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="poor-wayfaring-stranger-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Rigaudon</span>
+                <div class="links-group">
+                    <a href="rigaudon.pdf" target="_blank">Duet Score</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Secrets</span>
+                <div class="links-group">
+                    <a class="score-link" href="secrets-score.pdf" target="_blank">Full Score</a>
+                    <a href="secrets-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="secrets-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Set Fire to the Rain</span>
+                <div class="links-group">
+                    <a class="score-link" href="set-fire-to-the-rain-score.pdf" target="_blank">Full Score</a>
+                    <a href="set-fire-to-the-rain-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="set-fire-to-the-rain-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Somebody That I Used to Know</span>
+                <div class="links-group">
+                    <a href="somebody-that-i-used-to-know-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="somebody-that-i-used-to-know-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">The River Flows in You</span>
+                <div class="links-group">
+                    <a class="score-link" href="the-river-flows-in-you-score.pdf" target="_blank">Full Score</a>
+                    <a href="the-river-flows-in-you-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="the-river-flows-in-you-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">When We Were Young / When You Were Young</span>
+                <div class="links-group">
+                    <a class="score-link" href="when-you-were-young-score.pdf" target="_blank">Full Score</a>
+                    <a href="when-we-were-young-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="when-we-were-young-part-2.pdf" target="_blank">Cello 2</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Yesterday</span>
+                <div class="links-group">
+                    <a href="yesterday.pdf" target="_blank">Duet Score</a>
+                </div>
+            </li>
         </ul>
     </div>
 </main>

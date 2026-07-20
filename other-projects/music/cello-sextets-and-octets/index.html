@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="music, arrangements, choral, satb, choir">
-    <meta name="description" content="Personal web page of Joshua Ruiter - Choral Arrangements.">
-    <title>Choral Arrangements | Joshua Ruiter</title>
+    <meta name="keywords" content="music, arrangements, cello, cello sextets, cello octets, cello ensemble">
+    <meta name="description" content="Personal web page of Joshua Ruiter - Cello Sextet and Octet Arrangements.">
+    <title>Cello Sextets & Octets | Joshua Ruiter</title>
     <style>
         /* Modern Reset & Base Styles */
         * {
@@ -80,16 +80,27 @@
             font-size: 1.1rem;
             margin-bottom: 25px;
         }
+        h2 {
+            font-size: 1.6rem;
+            color: #444;
+            margin: 30px 0 15px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h2:first-of-type {
+            margin-top: 10px;
+        }
 
         /* PDF List Styling */
         .portfolio-section {
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .pdf-list {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
-        .pdf-list > li {
+        .pdf-list li {
             margin-bottom: 15px;
             padding: 15px;
             background: #fcfcfc;
@@ -101,20 +112,15 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        
-        /* Multi-file alignment layout */
-        .item-info {
+        .piece-info {
             font-weight: 500;
-            flex: 1;
-            min-width: 250px;
         }
-        .file-links {
+        .links-group {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
-        
-        .file-links a {
+        .pdf-list a {
             color: #0066cc;
             text-decoration: none;
             font-weight: 500;
@@ -123,17 +129,17 @@
             background-color: #f0f4f8;
             transition: background-color 0.2s, color 0.2s;
         }
-        .file-links a:hover {
+        .pdf-list a:hover {
             background-color: #0066cc;
             color: #fff;
             text-decoration: none;
         }
-        .file-links a.score-link {
+        .pdf-list a.score-link {
             background-color: #fff9e6;
             color: #b78103;
             border: 1px solid #ffe0b2;
         }
-        .file-links a.score-link:hover {
+        .pdf-list a.score-link:hover {
             background-color: #fff3cd;
             color: #b78103;
         }
@@ -152,7 +158,7 @@
 <body>
 
 <header>
-    <h1>Choral</h1>
+    <h1>Cello Sextets & Octets</h1>
     
     <!-- Top-level Site Navigation -->
     <nav class="main-nav">
@@ -167,72 +173,79 @@
         <a href="../cello-solos/">Cello Solos</a>
         <a href="../cello-duets/">Cello Duets</a>
         <a href="../cello-quartets/">Cello Quartets</a>
-        <a href="../cello-sextets-and-octets/">Cello Sextets & Octets</a>
+        <a href="../cello-sextets-and-octets/" class="active">Cello Sextets & Octets</a>
         <a href="../page-turn-copies/">2Cellos Page Turn Copies</a>
         <a href="../violin-ensembles/">Violin Ensembles</a>
-        <a href="../choral/" class="active">Choral</a>
+        <a href="../choral/">Choral</a>
         <a href="../">← Back to Music Main</a>
     </nav>
 </header>
 
 <main>
-    <p>Arrangements and transcriptions for choral ensembles.</p>
+    <p>Arrangements for larger cello ensembles.</p>
     
     <div class="portfolio-section">
+        
+        <h2>Cello Sextets</h2>
         <ul class="pdf-list">
             <li>
-                <div class="item-info">
-                    <span>Amazing Grace</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/amazing-grace.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Hey Jude (The Beatles)</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/hey-jude.pdf" target="_blank">View PDF</a>
+                <span class="piece-info">Misirlou</span>
+                <div class="links-group">
+                    <a class="score-link" href="misirlou-score.pdf" target="_blank">Full Score</a>
+                    <a href="misirlou-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="misirlou-part-2.pdf" target="_blank">Cello 2</a>
+                    <a href="misirlou-part-3.pdf" target="_blank">Cello 3</a>
+                    <a href="misirlou-part-4.pdf" target="_blank">Cello 4</a>
+                    <a href="misirlou-part-5.pdf" target="_blank">Cello 5</a>
+                    <a href="misirlou-part-6.pdf" target="_blank">Cello 6</a>
                 </div>
             </li>
             <li>
-                <div class="item-info">
-                    <span>I Sing the Mighty Power of God</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/i-sing-the-mighty-power-of-god.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>It's Alright</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/its-alright.pdf" target="_blank">View PDF</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Strawberry Fields Forever (The Beatles)</span>
-                </div>
-                <div class="file-links">
-                    <a class="score-link" href="../pdfs/strawberry-fields-score.pdf" target="_blank">Full Score</a>
-                    <a href="../pdfs/strawberry-fields-piano-reduction.pdf" target="_blank">Piano Reduction</a>
-                </div>
-            </li>
-            <li>
-                <div class="item-info">
-                    <span>Young and Beautiful (Lana Del Rey)</span>
-                </div>
-                <div class="file-links">
-                    <a href="../pdfs/young-and-beautiful-satb-b.pdf" target="_blank">SATB (B Major)</a>
-                    <a href="../pdfs/young-and-beautiful-satb-csharp.pdf" target="_blank">SATB (C# Major)</a>
-                    <a href="../pdfs/young-and-beautiful-ssaa-b.pdf" target="_blank">SSAA (B Major)</a>
-                    <a href="../pdfs/young-and-beautiful-ssaa-csharp.pdf" target="_blank">SSAA (C# Major)</a>
+                <span class="piece-info">Smooth Criminal</span>
+                <div class="links-group">
+                    <a class="score-link" href="smooth-criminal-score.pdf" target="_blank">Full Score</a>
+                    <a href="smooth-criminal-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="smooth-criminal-part-2.pdf" target="_blank">Cello 2</a>
+                    <a href="smooth-criminal-part-3.pdf" target="_blank">Cello 3</a>
+                    <a href="smooth-criminal-part-4.pdf" target="_blank">Cello 4</a>
+                    <a href="smooth-criminal-part-5.pdf" target="_blank">Cello 5</a>
+                    <a href="smooth-criminal-part-6.pdf" target="_blank">Cello 6</a>
                 </div>
             </li>
         </ul>
+
+        <h2>Cello Octets</h2>
+        <ul class="pdf-list">
+            <li>
+                <span class="piece-info">Cry Me a River</span>
+                <div class="links-group">
+                    <a class="score-link" href="cry-me-a-river-score.pdf" target="_blank">Full Score</a>
+                    <a href="cry-me-a-river-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="cry-me-a-river-part-2.pdf" target="_blank">Cello 2</a>
+                    <a href="cry-me-a-river-part-3.pdf" target="_blank">Cello 3</a>
+                    <a href="cry-me-a-river-part-4.pdf" target="_blank">Cello 4</a>
+                    <a href="cry-me-a-river-part-5.pdf" target="_blank">Cello 5</a>
+                    <a href="cry-me-a-river-part-6.pdf" target="_blank">Cello 6</a>
+                    <a href="cry-me-a-river-part-7.pdf" target="_blank">Cello 7</a>
+                    <a href="cry-me-a-river-part-8.pdf" target="_blank">Cello 8</a>
+                </div>
+            </li>
+            <li>
+                <span class="piece-info">Kashmir</span>
+                <div class="links-group">
+                    <a class="score-link" href="kashmir-score.pdf" target="_blank">Full Score</a>
+                    <a href="kashmir-part-1.pdf" target="_blank">Cello 1</a>
+                    <a href="kashmir-part-2.pdf" target="_blank">Cello 2</a>
+                    <a href="kashmir-part-3.pdf" target="_blank">Cello 3</a>
+                    <a href="kashmir-part-4.pdf" target="_blank">Cello 4</a>
+                    <a href="kashmir-part-5.pdf" target="_blank">Cello 5</a>
+                    <a href="kashmir-part-6.pdf" target="_blank">Cello 6</a>
+                    <a href="kashmir-part-7.pdf" target="_blank">Cello 7</a>
+                    <a href="kashmir-part-8.pdf" target="_blank">Cello 8</a>
+                </div>
+            </li>
+        </ul>
+        
     </div>
 </main>
 

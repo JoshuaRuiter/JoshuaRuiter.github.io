@@ -13,14 +13,27 @@
             padding: 0 20px;
             color: #333;
         }
+        nav {
+            margin-bottom: 15px;
+        }
         nav a {
-            margin-right: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
             text-decoration: none;
             color: #0066cc;
             font-weight: bold;
+            display: inline-block;
+            /* Box styling elements */
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            /* Highlight interaction elements */
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
         }
         main {
             margin-top: 40px;
@@ -33,13 +46,30 @@
         main a:hover {
             text-decoration: underline;
         }
+        
+        /* Shared box style for standalone links like the CV */
+        .btn-box {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .btn-box:hover {
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1> Joshua Ruiter </h1>
-        <!-- Relative links pointing to the subfolder index files -->
+        <!-- Global navigation links -->
         <nav>
             <a href="/">Home</a>
             <a href="/research/">Research</a>
@@ -50,8 +80,8 @@
 
     <main>
         <h2>Welcome</h2>
-        <p><a href="CV.pdf" target="_blank"> CV </a></p>
-        <p> Home page</p>
+        <p><a href="CV.pdf" target="_blank" class="btn-box"> CV </a></p>
+        <p> Home page </p>
     </main>
 
     <footer>

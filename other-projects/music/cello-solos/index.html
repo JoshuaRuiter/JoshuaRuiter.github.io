@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="math, mathematics, music, arrangements, cello">
-    <meta name="description" content="Personal web page of Joshua Ruiter - Music Arranging Portfolio.">
-    <title>Music | Joshua Ruiter</title>
+    <meta name="keywords" content="music, arrangements, cello, cello solo">
+    <meta name="description" content="Personal web page of Joshua Ruiter - Cello Solo Arrangements.">
+    <title>Cello Solos | Joshua Ruiter</title>
     <style>
         /* Modern Reset & Base Styles */
         * {
@@ -81,7 +81,7 @@
             margin-bottom: 25px;
         }
 
-        /* Example Placeholder for PDF List */
+        /* PDF List Styling */
         .portfolio-section {
             margin-top: 20px;
         }
@@ -103,9 +103,15 @@
             color: #0066cc;
             text-decoration: none;
             font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
         }
         .pdf-list a:hover {
-            text-decoration: underline;
+            background-color: #0066cc;
+            color: #fff;
+            text-decoration: none;
         }
 
         /* Footer */
@@ -122,36 +128,48 @@
 <body>
 
 <header>
-    <h1>Music</h1>
+    <h1>Cello Solos</h1>
     
-    <!-- Top-level Site Navigation aligned with updated layout -->
+    <!-- Top-level Site Navigation -->
     <nav class="main-nav">
-        <a href="../">Home</a>
-        <a href="../math/">Math</a>
-        <a href="../teaching/">Teaching</a>
-        <a href="../other-projects/">Other Projects</a>
+        <a href="../../../">Home</a>
+        <a href="../../../math/">Math</a>
+        <a href="../../../teaching/">Teaching</a>
+        <a href="../../../other-projects/">Other Projects</a>
     </nav>
     
-<!-- Music Portfolio Specific Categories aligned with clean URLs -->
+    <!-- Music Portfolio Specific Categories -->
     <nav class="music-nav">
-        <a href="cello-solos/">Cello Solos</a>
-        <a href="cello-duets/">Cello Duets</a>
-        <a href="cello-quartets/">Cello Quartets</a>
-        <a href="cello-sextets/">Cello Sextets</a>
-        <a href="cello-octets/">Cello Octets</a>
-        <a href="page-turn-copies/">2Cellos Page Turn Copies</a>
-        <a href="violin-ensembles/">Violin Ensembles</a>
-        <a href="choral/">Choral</a>
-        <a href="piano/">Piano</a>
+        <!-- Note the back track "../" to go up one level to the main music folder before entering subfolders -->
+        <a href="../cello-solos/" class="active">Cello Solos</a>
+        <a href="../cello-duets/">Cello Duets</a>
+        <a href="../cello-quartets/">Cello Quartets</a>
+        <a href="../cello-sextets/">Cello Sextets</a>
+        <a href="../cello-octets/">Cello Octets</a>
+        <a href="../page-turn-copies/">2Cellos Page Turn Copies</a>
+        <a href="../violin-ensembles/">Violin Ensembles</a>
+        <a href="../choral/">Choral</a>
+        <a href="../piano/">Piano</a>
+        <a href="../">← Back to Music Main</a>
     </nav>
 </header>
 
 <main>
-    <p>This page contains my music arranging portfolio, organized by instrumentation. All of these arrangements were done using Musescore.</p>
+    <p>Arrangements for unaccompanied solo cello.</p>
+    
+    <div class="portfolio-section">
+        <ul class="pdf-list">
+            <li>
+                <span>I've Just Seen A Face (The Beatles)</span>
+                <!-- Assuming your PDFs folder is kept in the main music directory -->
+                <a href="../pdfs/ive-just-seen-a-face.pdf" target="_blank">View PDF</a>
+            </li>
+        </ul>
+    </div>
 </main>
 
 <footer>
-    This page last modified on September 28, 2018.
+    <p>&copy; 2026 Joshua Ruiter</p>
 </footer>
 
 </body>

@@ -14,22 +14,44 @@
             padding: 0 20px;
             color: #333;
         }
+        nav {
+            margin-bottom: 15px;
+        }
         nav a {
-            margin-right: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
             text-decoration: none;
             color: #0066cc;
             font-weight: bold;
+            display: inline-block;
+            /* Box styling elements */
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            /* Highlight interaction elements */
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
         }
         main {
             margin-top: 40px;
+        }
+        /* Style for links inside the main text body */
+        main a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        main a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
+    <header>
         <h1> Joshua Ruiter </h1>
         <!-- Relative links pointing to the subfolder index files -->
         <nav>

@@ -13,14 +13,27 @@
             padding: 0 20px;
             color: #333;
         }
+        nav {
+            margin-bottom: 15px;
+        }
         nav a {
-            margin-right: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
             text-decoration: none;
             color: #0066cc;
             font-weight: bold;
+            display: inline-block;
+            /* Box styling elements */
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            /* Highlight interaction elements */
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
         }
         main {
             margin-top: 40px;
@@ -28,7 +41,8 @@
         /* Style for the project sub-navigation list */
         .project-list {
             margin-top: 20px;
-            padding-left: 20px;
+            padding-left: 0;
+            list-style-type: none;
         }
         .project-list li {
             margin-bottom: 15px;
@@ -37,9 +51,17 @@
             font-weight: bold;
             color: #0066cc;
             text-decoration: none;
+            display: inline-block;
+            /* Match the button box styles */
+            padding: 6px 12px;
+            border-radius: 4px;
+            background-color: #f0f4f8;
+            transition: background-color 0.2s, color 0.2s;
         }
         .project-link:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            background-color: #0066cc;
+            color: #fff;
         }
     </style>
 </head>
@@ -71,7 +93,7 @@
             </li>
             <li>
                 <a class="project-link" href="/other-projects/spirit-island/">Spirit Island</a>
-                — Fan-made content.
+                — Fan-made content for the cooperative board game designed by Eric Reuss.
             </li>
             <li>
                 <a class="project-link" href="/other-projects/cube/">Cube</a>

@@ -6,7 +6,7 @@
     <meta name="keywords" content="math, mathematics, music, arrangements, cello">
     <meta name="description" content="Personal web page of Joshua Ruiter - Music Arranging Portfolio.">
     <title>Music | Joshua Ruiter</title>
-    <link rel="stylesheet" href="../styles.css"> 
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 
@@ -598,12 +598,13 @@
 
         // Update navigation button active styling
         const buttons = document.querySelectorAll('.nav-btn');
-        buttons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('onclick') === `showSection('${sectionId}')`) {
-                btn.classList.add('active');
-            }
-        });
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Find the button that triggered the function event contextually
+        const clickedButton = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(sectionId));
+        if (clickedButton) {
+            clickedButton.classList.add('active');
+        }
     }
 </script>
 

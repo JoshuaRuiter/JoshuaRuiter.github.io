@@ -3,41 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Joshua Ruiter - Personal Website</title>
-    <style>
-        /* Minimal layout styling */
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
-        }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            margin-top: 40px;
-        }
-    </style>
+    <meta name="description" content="Personal web page of Joshua Ruiter - Cube Projects.">
+    <title>Cube | Joshua Ruiter</title>
+    <!-- Relative path up two levels to root styles.css -->
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 
     <header>
         <h1>Joshua Ruiter</h1>
-        <!-- Relative links pointing to the subfolder index files -->
-        <nav>
-            <a href="/">Home</a>
-            <a href="/research/">Research</a>
-            <a href="/teaching/">Teaching</a>
-            <a href="/other-projects/">Other Projects</a>
+        <!-- Site Navigation matching main-nav styling -->
+        <nav class="main-nav">
+            <a href="../../">Home</a>
+            <a href="../../research/">Research</a>
+            <a href="../../teaching/">Teaching</a>
+            <a href="../../other-projects/" class="active">Other Projects</a>
         </nav>
     </header>
 
@@ -47,8 +27,7 @@
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Your Name</p>
+        <p>&copy; 2026 Joshua Ruiter</p>
     </footer>
 
 </body>

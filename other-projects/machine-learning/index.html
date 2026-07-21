@@ -5,108 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal web page of Joshua Ruiter - Machine Learning Projects.">
     <title>Machine Learning | Joshua Ruiter</title>
-    <style>
-        /* Modern Reset & Base Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        /* Header & Navigation Layout */
-        header {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #222;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-        }
-        /* Top main navigation separator */
-        nav.main-nav {
-            border-bottom: 1px solid #eaeaea;
-        }
-        nav a {
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 4px;
-            background-color: #f0f4f8;
-            transition: background-color 0.2s, color 0.2s;
-        }
-        nav a:hover {
-            background-color: #0066cc;
-            color: #fff;
-        }
-        /* Active page styling */
-        nav a.active {
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Content Area */
-        main {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            min-height: 300px;
-        }
-        main h2 {
-            font-size: 1.8rem;
-            color: #222;
-            margin-bottom: 15px;
-        }
-        main p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            border-top: 1px solid #eaeaea;
-            padding-top: 20px;
-        }
-    </style>
+    <!-- Relative path up two levels to root styles.css -->
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
 
 <header>
     <h1>Joshua Ruiter</h1>
     
-    <!-- Top-level Site Navigation aligned with global modern styles -->
+    <!-- Top-level Site Navigation -->
     <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/research/">Research</a>
-        <a href="/teaching/">Teaching</a>
-        <a href="/other-projects/" class="active">Other Projects</a>
+        <a href="../../">Home</a>
+        <a href="../../research/">Research</a>
+        <a href="../../teaching/">Teaching</a>
+        <a href="../../other-projects/" class="active">Other Projects</a>
     </nav>
 </header>
 
@@ -116,7 +28,7 @@
 </main>
 
 <footer>
-    &copy; 2026 Joshua Ruiter
+    <p>&copy; 2026 Joshua Ruiter</p>
 </footer>
 
 </body>

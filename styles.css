@@ -192,3 +192,35 @@ footer {
 .project-list li {
     margin-bottom: 15px;
 }
+
+/* Reduce gap between cube description and Featured Cards heading */
+.cube-description {
+    margin-bottom: 0.25rem;
+}
+
+.cube-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+}
+
+/* Increase spacing between cube sections */
+.cube-card + .cube-card {
+    margin-top: 2.5rem;
+}
+
+/* Force 6 equal columns with no gap between them */
+.card-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0; /* Removes space between cards so they grow to fill the row */
+    max-width: 900px; /* Keeps the total row width unchanged */
+}
+
+/* Let the images scale up to fill their grid column completely */
+.card-gallery img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block; /* Prevents tiny inline gaps beneath images */
+    border-radius: 4.75% / 3.5%;
+}

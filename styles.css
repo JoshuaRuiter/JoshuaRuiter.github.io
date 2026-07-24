@@ -224,3 +224,13 @@ footer {
     display: block; /* Prevents tiny inline gaps beneath images */
     border-radius: 4.75% / 3.5%;
 }
+
+.piece-image img {
+    max-width: 100%;
+    width: 900px; /* Adjust this value to your preferred display width */
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}

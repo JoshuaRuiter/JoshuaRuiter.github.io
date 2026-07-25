@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research papers by Joshua Ruiter.">
+    <meta name="description" content="Research papers and projects by Joshua Ruiter.">
     <title>Research | Joshua Ruiter</title>
     <!-- External stylesheet -->
     <link rel="stylesheet" href="../styles.css">
@@ -23,15 +23,15 @@
 </header>
 
 <main>
-    <h2 style="margin-bottom: 2rem;">Research Papers</h2>
+    <h2 style="margin-bottom: 2rem;">Research papers</h2>
 
     <article class="project-card">
         <h3>On abstract homomorphisms of some special unitary groups</h3>
         <p class="project-meta" style="margin-bottom: 0.25rem;">Coauthors: Igor A. Rapinchuk</p>
         <nav class="project-links" style="margin-top: 0.5rem;">
-            <a href="abstract-homs.pdf" target="_blank" rel="noopener">PDF Document</a>
-            <a href="https://arxiv.org/abs/2107.07351" target="_blank" rel="noopener">arXiv Link</a>
-            <a href="https://pubs.ams.org/PROC/2022-150-10/S0002-9939-2022-15991-7" target="_blank" rel="noopener">Journal Article</a>
+            <a href="Papers/abstract-homs.pdf" target="_blank" rel="noopener">PDF</a>
+            <a href="https://arxiv.org/abs/2107.07351" target="_blank" rel="noopener">arXiv</a>
+            <a href="https://pubs.ams.org/PROC/2022-150-10/S0002-9939-2022-15991-7" target="_blank" rel="noopener">Journal</a>
         </nav>
     </article>
 
@@ -39,8 +39,8 @@
         <h3>Consensus and clustering in opinion formation on networks</h3>
         <p class="project-meta" style="margin-bottom: 0.25rem;">Coauthors: Julia Bujalski, Grace Dwyer, Todd Kapitula, Quang-Nhat Le, Harjasleen Malvai, Jordan Rosenthal-Kay</p>
         <nav class="project-links" style="margin-top: 0.5rem;">
-            <a href="opinion-formation.pdf" target="_blank" rel="noopener">PDF Document</a>
-            <a href="https://royalsocietypublishing.org/rsta/article/376/2117/20170186/115571/Consensus-and-clustering-in-opinion-formation-on" target="_blank" rel="noopener">Journal Article</a>
+            <a href="Papers/opinion-formation.pdf" target="_blank" rel="noopener">PDF</a>
+            <a href="https://royalsocietypublishing.org/rsta/article/376/2117/20170186/115571/Consensus-and-clustering-in-opinion-formation-on" target="_blank" rel="noopener">Journal</a>
         </nav>
     </article>
 
@@ -48,10 +48,69 @@
         <h3>An algebraic characterization of highly connected 2n-manifolds</h3>
         <p class="project-meta" style="margin-bottom: 0.25rem;">Coauthors: Shamuel Auyeung, Daiwei Zhang</p>
         <nav class="project-links" style="margin-top: 0.5rem;">
-            <a href="connected-2n-manifolds.pdf" target="_blank" rel="noopener">PDF Document</a>
-            <a href="https://scholar.rose-hulman.edu/rhumj/vol17/iss2/5/" target="_blank" rel="noopener">Journal Article</a>
+            <a href="Papers/connected-2n-manifolds.pdf" target="_blank" rel="noopener">PDF</a>
+            <a href="https://scholar.rose-hulman.edu/rhumj/vol17/iss2/5/" target="_blank" rel="noopener">Journal</a>
         </nav>
     </article>
+
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Software & computational projects</h2>
+
+    <article class="project-card">
+        <h3>Pinning-Sympy</h3>
+        <p style="margin-top: 0.5rem;">A package for computations with pinnings of matrix groups. View on <a href="https://github.com/JoshuaRuiter/Pinning-Sympy" target="_blank" rel="noopener">GitHub</a>.</p>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/notes.pdf" target="_blank" rel="noopener">Mathematical background</a>
+        </nav>
+
+        <p class="project-meta" style="margin-bottom: 0.25rem;">Below are examples of programmatically generated LaTeX PDF files summarizing pinning computations for special linear, special orthogonal, and special unitary groups.</p>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">Special linear</h4>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/SL-n2.pdf" target="_blank" rel="noopener">n=2</a>
+            <a href="Pinning-sympy/SL-n3.pdf" target="_blank" rel="noopener">n=3</a>
+            <a href="Pinning-sympy/SL-n4.pdf" target="_blank" rel="noopener">n=4</a>
+            <a href="Pinning-sympy/SL-n5.pdf" target="_blank" rel="noopener">n=5</a>
+            <a href="Pinning-sympy/SL-n6.pdf" target="_blank" rel="noopener">n=6</a>
+        </nav>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">Special Orthogonal</h4>
+        
+        <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600;">Split</h5>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/SO-n4-q2.pdf" target="_blank" rel="noopener">n=4, q=2</a>
+            <a href="Pinning-sympy/SO-n6-q3.pdf" target="_blank" rel="noopener">n=6, q=3</a>
+        </nav>
+
+        <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600;">Non-split</h5>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/SO-n4-q1.pdf" target="_blank" rel="noopener">n=4, q=1</a>
+            <a href="Pinning-sympy/SO-n5-q1.pdf" target="_blank" rel="noopener">n=5, q=1</a>
+            <a href="Pinning-sympy/SO-n5-q2.pdf" target="_blank" rel="noopener">n=5, q=2</a>
+            <a href="Pinning-sympy/SO-n6-q1.pdf" target="_blank" rel="noopener">n=6, q=1</a>
+            <a href="Pinning-sympy/SO-n6-q2.pdf" target="_blank" rel="noopener">n=6, q=2</a>
+        </nav>
+
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">Special Unitary</h4>
+        
+        <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600;">Quasi-split</h5>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/SU-n2-q1-eps-1.pdf" target="_blank" rel="noopener">n=2, q=1, ε=1</a>
+            <a href="Pinning-sympy/SU-n2-q1-eps-minus1.pdf" target="_blank" rel="noopener">n=2, q=1, ε=-1</a>
+            <a href="Pinning-sympy/SU-n4-q2-eps-1.pdf" target="_blank" rel="noopener">n=4, q=2, ε=1</a>
+            <a href="Pinning-sympy/SU-n4-q2-eps-minus1.pdf" target="_blank" rel="noopener">n=4, q=2, ε=-1</a>
+            <a href="Pinning-sympy/SU-n6-q3-eps-1.pdf" target="_blank" rel="noopener">n=6, q=3, ε=1</a>
+            <a href="Pinning-sympy/SU-n6-q3-eps-minus1.pdf" target="_blank" rel="noopener">n=6, q=3, ε=-1</a>
+        </nav>
+
+        <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: 600;">Non-quasi-split</h5>
+        <nav class="project-links" style="margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="Pinning-sympy/SU-n5-q2-eps-1.pdf" target="_blank" rel="noopener">n=5, q=2, ε=1</a>
+            <a href="Pinning-sympy/SU-n5-q2-eps-minus1.pdf" target="_blank" rel="noopener">n=5, q=2, ε=-1</a>
+            <a href="Pinning-sympy/SU-n6-q2-eps-1.pdf" target="_blank" rel="noopener">n=6, q=2, ε=1</a>
+            <a href="Pinning-sympy/SU-n6-q2-eps-minus1.pdf" target="_blank" rel="noopener">n=6, q=2, ε=-1</a>
+        </nav>
+    </article>
+
 </main>
 
 <footer>

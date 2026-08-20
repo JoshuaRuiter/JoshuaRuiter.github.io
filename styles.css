@@ -111,6 +111,7 @@ main p {
     font-weight: 600;
     margin-bottom: 10px;
     color: #2c3e50;
+    cursor: pointer;
 }
 
 /* PDF Download Links Layout */
@@ -165,7 +166,7 @@ footer {
     padding-top: 20px;
 }
 
-/* Shared Box / Button Links (e.g., CV button, Project list buttons) */
+/* Shared Box / Button Links */
 .btn-box, .project-link {
     display: inline-block;
     text-decoration: none;
@@ -183,7 +184,7 @@ footer {
     text-decoration: none;
 }
 
-/* Optional: Spacing for list items */
+/* Spacing for list items */
 .project-list {
     margin-top: 20px;
     padding-left: 0;
@@ -193,7 +194,7 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Reduce gap between cube description and Featured Cards heading */
+/* Cube section adjustments */
 .cube-description {
     margin-bottom: 0.25rem;
 }
@@ -203,34 +204,62 @@ footer {
     margin-bottom: 0.3rem;
 }
 
-/* Increase spacing between cube sections */
 .cube-card + .cube-card {
     margin-top: 2.5rem;
 }
 
-/* Force 6 equal columns with no gap between them */
+/* Card Gallery */
 .card-gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 0; /* Removes space between cards so they grow to fill the row */
-    max-width: 900px; /* Keeps the total row width unchanged */
+    gap: 0;
+    max-width: 900px;
 }
 
-/* Let the images scale up to fill their grid column completely */
 .card-gallery img {
     width: 100%;
     max-width: none;
     height: auto;
-    display: block; /* Prevents tiny inline gaps beneath images */
+    display: block;
     border-radius: 4.75% / 3.5%;
 }
 
 .piece-image img {
     max-width: 100%;
-    width: 900px; /* Adjust this value to your preferred display width */
+    width: 900px;
     height: auto;
     display: block;
     margin: 10px 0;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Card Grid Layout for HTML <details> sections (5 per row) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
 }

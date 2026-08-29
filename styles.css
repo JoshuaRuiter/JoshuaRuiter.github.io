@@ -80,6 +80,20 @@ main p {
     margin-bottom: 25px;
 }
 
+/* Featured / Homepage Image Styling */
+.image-container {
+    width: 100%;
+    margin: 15px 0 25px 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 /* Portfolio Sections */
 .portfolio-section {
     display: none;

@@ -1,3 +1,7 @@
+html {
+    font-size: 19px; /* Default browser base is 16px */
+}
+
 /* Modern Reset & Base Styles */
 * {
     box-sizing: border-box;

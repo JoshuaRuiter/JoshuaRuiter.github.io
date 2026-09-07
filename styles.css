@@ -1,8 +1,4 @@
-html {
-    font-size: 19px; /* Default browser base is 16px */
-}
-
-/* Modern Reset & Base Styles */
+/* Base Styles & Layout */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,320 +9,213 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    max-width: 100%; 
-    margin: 0;       
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
-/* Header & Navigation Layout */
 header {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 10px;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px; /* Increased gap between buttons */
-    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
     padding-bottom: 15px;
 }
 
-nav.main-nav {
-    border-bottom: 1px solid #eaeaea;
+h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
-/* Navigation Links & Buttons (Increased Size) */
-nav a, nav button, .music-nav .nav-btn {
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
     text-decoration: none;
     color: #0066cc;
-    font-size: 1.1rem; /* Increased font size */
     font-weight: 500;
-    padding: 10px 18px; /* Increased padding (top/bottom left/right) */
-    border-radius: 6px;
-    background-color: #f0f4f8;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background-color 0.2s, color 0.2s;
 }
 
-nav a:hover, nav button:hover, .music-nav .nav-btn:hover {
-    background-color: #0066cc;
-    color: #fff;
+.main-nav a:hover {
+    text-decoration: underline;
 }
 
-nav button.active, .music-nav .nav-btn.active {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Specific container styling for sub-navigation bars */
-.music-nav {
+/* Hero Section */
+.hero-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
+    gap: 30px;
+    align-items: center; /* Vertically centers the right column relative to the photo */
+    margin-bottom: 40px;
 }
 
-/* Content Area */
-main {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    min-height: 300px;
-}
-
-main p {
-    margin-bottom: 25px;
-}
-
-/* Featured / Homepage Image Styling */
+/* Set image container strictly to 50% width minus half the flex gap */
 .image-container {
-    width: 100%;
-    margin: 15px 0 25px 0;
+    flex: 0 0 calc(50% - 15px);
+    max-width: 50%;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Portfolio Sections */
-.portfolio-section {
-    display: none;
-    margin-top: 20px;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-.portfolio-section.active-section {
     display: block;
 }
 
-.portfolio-section h2 {
-    color: #444;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+/* Right-side column occupies the remaining 50% */
+.hero-right {
+    flex: 0 0 calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Piece Groups */
-.piece-group {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #fdfdfd;
+/* Right-side column grouping paragraph and document links */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-right p {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Document Cards Section */
+.document-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.doc-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background-color: #f0f4f8;
+    border: 1px solid #d0e2f3;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0066cc;
+    transition: background-color 0.2s, border-color 0.2s;
+    flex: 1 1 auto;
+}
+
+.doc-card:hover {
+    background-color: #e6f2ff;
+    border-color: #0066cc;
+}
+
+.doc-icon {
+    font-size: 1.5rem;
+}
+
+.doc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.doc-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Education Section */
+.education-section {
+    border-top: 1px solid #eaeaea;
+    padding-top: 30px;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: #fdfdfd;
     border: 1px solid #eef2f5;
     border-radius: 6px;
 }
 
-.piece-title {
-    font-weight: 600;
-    margin-bottom: 10px;
+.education-text {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.education-text h3 {
     color: #2c3e50;
-    cursor: pointer;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
 }
 
-/* PDF Download Links Layout */
-.pdf-links {
+.education-dates {
+    font-weight: 600;
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.education-year {
+    font-weight: 600;
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.logo-container {
+    flex: 0 0 400px;
+    height: 240px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.pdf-links a {
-    display: inline-flex;
     align-items: center;
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 4px 10px;
-    background: #fff;
-    border: 1px solid #d0e2f3;
-    border-radius: 4px;
-    transition: all 0.2s;
+    justify-content: center;
 }
 
-.pdf-links a:hover {
-    background: #e6f2ff;
-    border-color: #0066cc;
-    text-decoration: none;
+.school-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.pdf-links a.score-link {
-    background: #fff9e6;
-    border-color: #ffe0b2;
-    color: #b78103;
-}
-
-.pdf-links a.score-link:hover {
-    background: #fff3cd;
-    border-color: #b78103;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Footer */
 footer {
-    margin-top: 40px;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
     text-align: center;
     font-size: 0.9rem;
     color: #666;
-    border-top: 1px solid #eaeaea;
-    padding-top: 20px;
 }
 
-/* Shared Box / Button Links */
-.btn-box, .project-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #0066cc;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 4px;
-    background-color: #f0f4f8;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-.btn-box:hover, .project-link:hover {
-    background-color: #0066cc;
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Spacing for list items */
-.project-list {
-    margin-top: 20px;
-    padding-left: 0;
-    list-style-type: none;
-}
-.project-list li {
-    margin-bottom: 15px;
-}
-
-/* Cube section adjustments */
-.cube-description {
-    margin-bottom: 0.25rem;
-}
-
-.cube-card h4 {
-    margin-top: 0;
-    margin-bottom: 0.3rem;
-}
-
-.cube-card + .cube-card {
-    margin-top: 2.5rem;
-}
-
-/* Card Gallery */
-.card-gallery {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0;
-    max-width: 900px;
-}
-
-.card-gallery img {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    display: block;
-    border-radius: 4.75% / 3.5%;
-}
-
-.piece-image img {
-    max-width: 100%;
-    width: 900px;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Card Grid Layout for HTML <details> sections (5 per row) */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    margin-top: 10px;
-}
-
-.card-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-image:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustment for mobile screens */
-@media (max-width: 600px) {
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-    }
-}
-
-/* Hero Section Layout (Photo + Text) */
-.hero-container {
-    display: flex;
-    align-items: center; /* Aligns photo and text vertically centered */
-    gap: 30px;
-    margin-bottom: 25px;
-}
-
-.hero-container .image-container {
-    flex: 0 0 50%; /* Takes up exactly 50% of the hero container width */
-    max-width: 50%;
-    margin: 0;
-}
-
-.hero-container .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.hero-container p {
-    flex: 1; /* Takes up the remaining 50% space */
-    margin-bottom: 0;
-}
-
-/* Stack vertically on mobile screens so it stays readable */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
     }
     
-    .hero-container .image-container {
-        flex: 1 1 100%;
+    .image-container {
         max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .education-item {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex: auto;
     }
 }

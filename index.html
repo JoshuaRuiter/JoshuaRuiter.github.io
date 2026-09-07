@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Joshua Ruiter - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <h1>Joshua Ruiter</h1>
-        <!-- Global navigation links -->
         <nav class="main-nav">
             <a href="/">Home</a>
             <a href="/research/">Research</a>
@@ -19,24 +18,70 @@
         </nav>
     </header>
 
-	<main>
+    <main>
+        <!-- Hero Section -->
         <div class="hero-container">
             <div class="image-container">
-                <img src="photo.jpeg" alt="Profile Photo">
+                <img src="photo.jpeg" alt="Profile Photo of Joshua Ruiter">
             </div>
-            <p>
-                I am a teacher and researcher at Batten University and I'm here to help people understand mathematics better.
-                I use alternative grading in courses like Calculus 1 and Introduction to Proofs to empower students to set and meet their own learning goals.
-                In research, I'm interested in a variety of topics related to algebraic groups.
-            </p>
+
+            <!-- Grouped right-side column -->
+            <div class="hero-right">
+                <p>
+                    I am a teacher and researcher at Batten University and my goal is to help people understand mathematics better.
+                    I use alternative grading in courses like Calculus 1 and Introduction to Proofs to empower students to set and meet their own learning goals.
+                    In research, I'm interested in a variety of topics related to algebraic groups.
+                </p>
+
+                <div class="document-buttons">
+                    <a href="CV.pdf" target="_blank" class="doc-card">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-info">
+                            <span class="doc-title">CV</span>
+                        </div>
+                    </a>
+                    <a href="Resume.pdf" target="_blank" class="doc-card">
+                        <div class="doc-icon">📄</div>
+                        <div class="doc-info">
+                            <span class="doc-title">Resume</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <div class="education-grid">
+                
+                <div class="education-item">
+                    <div class="education-text">
+                        <h3>Michigan State University</h3>
+                        <p class="education-dates">Ph.D. in Mathematics, 2022</p>
+                        <p>Thesis on algebraic groups and Lie theory</p>
+                    </div>
+                    <div class="logo-container">
+                        <img src="msu-logo.png" alt="Michigan State University Logo" class="school-logo">
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-text">
+                        <h3>Calvin University</h3>
+                        <p class="education-dates">B.A. in Mathematics, 2016</p>
+                        <p>Senior thesis on Lie algebras</p>
+                    </div>
+                    <div class="logo-container">
+                        <img src="calvin-logo.png" alt="Calvin University Logo" class="school-logo">
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
-	<p><a href="CV.pdf" target="_blank" class="btn-box"> CV </a>
-	<a href="Resume.pdf" target="_blank" class="btn-box"> Resume </a></p>
-
     <footer>
-        <p>&copy; 2026 Personal Website. All rights reserved.</p>
+        <p>&copy; 2026 Joshua Ruiter. All rights reserved.</p>
     </footer>
 
 </body>

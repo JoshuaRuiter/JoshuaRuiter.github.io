@@ -1,0 +1,221 @@
+/* Base Styles & Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    gap: 30px;
+    align-items: center; /* Vertically centers the right column relative to the photo */
+    margin-bottom: 40px;
+}
+
+/* Set image container strictly to 50% width minus half the flex gap */
+.image-container {
+    flex: 0 0 calc(50% - 15px);
+    max-width: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Right-side column occupies the remaining 50% */
+.hero-right {
+    flex: 0 0 calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right-side column grouping paragraph and document links */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-right p {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Document Cards Section */
+.document-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.doc-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background-color: #f0f4f8;
+    border: 1px solid #d0e2f3;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #0066cc;
+    transition: background-color 0.2s, border-color 0.2s;
+    flex: 1 1 auto;
+}
+
+.doc-card:hover {
+    background-color: #e6f2ff;
+    border-color: #0066cc;
+}
+
+.doc-icon {
+    font-size: 1.5rem;
+}
+
+.doc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.doc-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Education Section */
+.education-section {
+    border-top: 1px solid #eaeaea;
+    padding-top: 30px;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #eef2f5;
+    border-radius: 6px;
+}
+
+.education-text {
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+.education-text h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+.education-dates {
+    font-weight: 600;
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.education-year {
+    font-weight: 600;
+    color: #444444;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.logo-container {
+    flex: 0 0 400px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .education-item {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex: auto;
+    }
+}

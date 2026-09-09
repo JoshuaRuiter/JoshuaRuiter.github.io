@@ -1,4 +1,8 @@
-/* Base Styles & Layout */
+html {
+    font-size: 19px; /* Default browser base is 16px */
+}
+
+/* Modern Reset & Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,70 +13,118 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100%; 
+    margin: 0;        
     padding: 20px;
+    background-color: #f9f9f9;
 }
 
+/* Header & Navigation Layout */
 header {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     margin-bottom: 30px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 15px;
 }
 
 h1 {
-    font-size: 2.2rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
 }
 
-.main-nav {
+nav {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 
-.main-nav a {
+nav.main-nav {
+    border-bottom: 1px solid #eaeaea;
+}
+
+nav a, nav button {
     text-decoration: none;
     color: #0066cc;
     font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #f0f4f8;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
+nav a:hover, nav button:hover {
+    background-color: #0066cc;
+    color: #fff;
 }
 
-/* Hero Section */
-.hero-container {
-    display: flex;
-    gap: 30px;
-    align-items: center; /* Vertically centers the right column relative to the photo */
-    margin-bottom: 40px;
+nav button.active {
+    background-color: #333;
+    color: #fff;
 }
 
-/* Set image container strictly to 50% width minus half the flex gap */
+/* Content Area */
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    min-height: 300px;
+}
+
+main p {
+    margin-bottom: 25px;
+}
+
+/* Featured / Standard Subpage Image Styling */
 .image-container {
-    flex: 0 0 calc(50% - 15px);
-    max-width: 50%;
+    width: 100%;
+    margin: 15px 0 25px 0;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
     display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Right-side column occupies the remaining 50% */
+/* Hero Section Layout (Main Landing Page) */
+.hero-container {
+    display: flex;
+    align-items: center; /* Vertically centers photo and text/document column */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.hero-container .image-container {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin: 0;
+    min-width: 0;
+}
+
+.hero-container .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .hero-right {
     flex: 0 0 calc(50% - 15px);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Right-side column grouping paragraph and document links */
-.hero-right {
-    flex: 1;
+    max-width: calc(50% - 15px);
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -80,10 +132,10 @@ h1 {
 
 .hero-right p {
     font-size: 1.05rem;
-    margin: 0;
+    margin-bottom: 0;
 }
 
-/* Document Cards Section */
+/* Document Cards Section (Resume/CV Buttons) */
 .document-buttons {
     display: flex;
     gap: 12px;
@@ -191,23 +243,192 @@ h1 {
     object-fit: contain;
 }
 
+/* Portfolio Sections */
+.portfolio-section {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.portfolio-section.active-section {
+    display: block;
+}
+
+.portfolio-section h2 {
+    color: #444;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Piece Groups */
+.piece-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fdfdfd;
+    border: 1px solid #eef2f5;
+    border-radius: 6px;
+}
+
+.piece-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+/* PDF Download Links Layout */
+.pdf-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pdf-links a {
+    display: inline-flex;
+    align-items: center;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 10px;
+    background: #fff;
+    border: 1px solid #d0e2f3;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.pdf-links a:hover {
+    background: #e6f2ff;
+    border-color: #0066cc;
+    text-decoration: none;
+}
+
+.pdf-links a.score-link {
+    background: #fff9e6;
+    border-color: #ffe0b2;
+    color: #b78103;
+}
+
+.pdf-links a.score-link:hover {
+    background: #fff3cd;
+    border-color: #b78103;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shared Box / Button Links */
+.btn-box, .project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #f0f4f8;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-box:hover, .project-link:hover {
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Spacing for list items */
+.project-list {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+.project-list li {
+    margin-bottom: 15px;
+}
+
+/* Cube section adjustments */
+.cube-description {
+    margin-bottom: 0.25rem;
+}
+
+.cube-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+}
+
+.cube-card + .cube-card {
+    margin-top: 2.5rem;
+}
+
+/* Card Gallery */
+.card-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    max-width: 900px;
+}
+
+.card-gallery img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+    border-radius: 4.75% / 3.5%;
+}
+
+.piece-image img {
+    max-width: 100%;
+    width: 900px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Card Grid Layout for HTML <details> sections (5 per row) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
 footer {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #eaeaea;
+    margin-top: 40px;
     text-align: center;
     font-size: 0.9rem;
     color: #666;
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
 }
 
+/* Responsive Rules */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
     }
     
-    .image-container {
-        max-width: 100%;
+    .hero-container .image-container,
+    .hero-right {
         flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .education-item {
@@ -217,5 +438,12 @@ footer {
 
     .logo-container {
         flex: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
     }
 }

@@ -48,27 +48,38 @@ nav.main-nav {
     border-bottom: 1px solid #eaeaea;
 }
 
-nav a, nav button {
+/* Sub-Navigation Specific Sizing & Layout */
+nav.music-nav {
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+
+nav a, nav button, .nav-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.2;
     text-decoration: none;
     color: #0066cc;
     font-weight: 500;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 4px;
     background-color: #f0f4f8;
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
-    font-family: inherit;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
-nav a:hover, nav button:hover {
+nav a:hover, nav button:hover, .nav-btn:hover {
     background-color: #0066cc;
     color: #fff;
 }
 
-nav button.active {
+nav button.active, .nav-btn.active {
     background-color: #333;
     color: #fff;
+    border-color: #333;
 }
 
 /* Content Area */
@@ -439,6 +450,15 @@ footer {
     .logo-container {
         flex: auto;
     }
+
+    nav.music-nav {
+        gap: 6px;
+    }
+
+    nav.music-nav .nav-btn {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -446,4 +466,62 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
+}
+
+.blog-section {
+    margin: 2rem 0;
+}
+
+.blog-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.blog-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4a5568;
+    background: #edf2f7;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card h3 {
+    margin: 0.5rem 0;
+}
+
+.blog-card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.blog-description {
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+.read-more-link {
+    font-weight: 600;
+    text-decoration: none;
+    color: #2b6cb0;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
 }

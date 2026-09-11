@@ -19,33 +19,46 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header & Navigation Layout */
-header {
-    background-color: #fff;
-    padding: 30px;
+/* Compact Sticky Header & Inline Layout */
+header, .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0066cc; /* Solid blue background */
+    padding: 12px 24px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #222;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    white-space: nowrap;
+    line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 nav.main-nav {
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: none;
 }
 
 /* Sub-Navigation Specific Sizing & Layout */
@@ -56,6 +69,41 @@ nav.music-nav {
     padding-bottom: 0;
 }
 
+/* Header Links & Nav Buttons */
+header nav a, 
+header nav button, 
+header .nav-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+}
+
+header nav a:hover, 
+header nav button:hover, 
+header .nav-btn:hover {
+    background-color: #e6f2ff;
+    color: #004080;
+}
+
+header nav button.active, 
+header .nav-btn.active {
+    background-color: #1a252f;
+    color: #ffffff;
+    border-color: #1a252f;
+}
+
+/* Non-header nav defaults fallback */
 nav a, nav button, .nav-btn {
     font-family: inherit;
     font-size: 0.95rem;
@@ -69,17 +117,6 @@ nav a, nav button, .nav-btn {
     border: 1px solid transparent;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-nav a:hover, nav button:hover, .nav-btn:hover {
-    background-color: #0066cc;
-    color: #fff;
-}
-
-nav button.active, .nav-btn.active {
-    background-color: #333;
-    color: #fff;
-    border-color: #333;
 }
 
 /* Content Area */
@@ -430,44 +467,7 @@ footer {
     padding-top: 20px;
 }
 
-/* Responsive Rules */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-    }
-    
-    .hero-container .image-container,
-    .hero-right {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .education-item {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .logo-container {
-        flex: auto;
-    }
-
-    nav.music-nav {
-        gap: 6px;
-    }
-
-    nav.music-nav .nav-btn {
-        font-size: 0.85rem;
-        padding: 6px 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-    }
-}
-
+/* Blog Section */
 .blog-section {
     margin: 2rem 0;
 }
@@ -524,4 +524,53 @@ footer {
 
 .read-more-link:hover {
     text-decoration: underline;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    header, .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+    
+    .hero-container .image-container,
+    .hero-right {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .education-item {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex: auto;
+    }
+
+    nav.music-nav {
+        gap: 6px;
+    }
+
+    nav.music-nav .nav-btn {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
 }

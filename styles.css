@@ -605,3 +605,21 @@ footer {
 .main-nav .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+header:has(.music-nav) {
+    flex-wrap: wrap;
+}
+
+header nav.music-nav {
+    flex-basis: 100%;
+    width: 100%;
+}
+
+nav.music-nav {
+    background-color: #3385ff; /* Medium-light blue */
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    gap: 8px;
+}

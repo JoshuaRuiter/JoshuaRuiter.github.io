@@ -368,7 +368,7 @@ main p {
 }
 
 /* Shared Box / Button Links */
-.btn-box, .project-link {
+.btn-box, .project-link, .project-links a {
     display: inline-block;
     text-decoration: none;
     color: #0066cc;
@@ -379,7 +379,7 @@ main p {
     transition: background-color 0.2s, color 0.2s;
 }
 
-.btn-box:hover, .project-link:hover {
+.btn-box:hover, .project-link:hover, .project-links a:hover {
     background-color: #0066cc;
     color: #fff;
     text-decoration: none;
@@ -573,4 +573,35 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
+}
+
+/* Container for dropdown positioning */
+.main-nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden by default; positioned directly beneath the parent link */
+.main-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; /* Adjust to match your navbar background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Vertical layout for sub-menu links */
+.main-nav .dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Reveal menu on hover over the container */
+.main-nav .dropdown:hover .dropdown-menu {
+    display: block;
 }
